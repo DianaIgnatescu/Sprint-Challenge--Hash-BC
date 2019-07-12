@@ -23,7 +23,9 @@ def proof_of_work(last_proof):
 
     print("Searching for next proof")
     proof = 0
-    #  TODO: Your code here
+
+    while valid_proof(last_proof, proof):
+        proof += 1
 
     print("Proof found: " + str(proof) + " in " + str(timer() - start))
     return proof
