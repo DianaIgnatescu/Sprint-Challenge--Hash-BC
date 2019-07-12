@@ -21,6 +21,8 @@ def proof_of_work(last_proof):
 
     start = timer()
 
+    last_hash = hashlib.sha256(str(last_proof).encode()).hexdigest()
+
     print("Searching for next proof")
     proof = 0
 
